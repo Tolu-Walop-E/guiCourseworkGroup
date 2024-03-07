@@ -1,0 +1,107 @@
+body {
+    background-image: url('images/background.jpeg');
+    background-size: cover; /* Adjust background size as needed */
+    background-position: center; /* Adjust background position as needed */
+    background-repeat: no-repeat; /* Prevent background from repeating */
+    background-blend-mode: overlay; /* Blend mode to apply background image on top of the color */
+    background-color: #0d2b41;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    max-height: 1024px;
+    overflow: auto;
+}
+
+.container {
+    padding: 20px;
+}
+
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #C60A07;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.heading {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+}
+
+.brightness-slider {
+    width: 840px; /* Adjusted width */
+    height: 5px;
+    -webkit-appearance: none;
+    background: #C60A07;
+    outline: none;
+    margin: 0 auto; /* Center the slider */
+    margin-left: 320px; /* Manually center the slider */
+
+}
+
+.brightness-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 40px;
+    height: 40px;
+    background-image: url('images/sunicon.png'); 
+    background-size: cover;
+    cursor: pointer;
+    background-position: center calc(100% + 1px); /* Lower the thumb by 2 pixels */
+
+}
+
+.sidebar-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-button {
+    width: 132px;
+    height: 40px;
+    background-color: #C60A07;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 100px; /* Adjusted margin */
+    font-weight: bold;
+
+}
+
+.sidebar-button:last-child {
+    margin-right: 0; /* No margin for the last button */
+}
+
+.edit-location-button {
+    width: 245px;
+    height: 59px;
+    background-color: #C60A07;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    margin: 60px auto 40px auto; /* 70px bottom margin added */
+    font-weight: bold;
+}
+
+.logout-button {
+    width: 245px;
+    height: 59px;
+    background-color: #C60A07;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+}
