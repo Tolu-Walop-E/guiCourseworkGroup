@@ -1,0 +1,69 @@
+body{
+    width:1440px;
+    height:1024px;
+    background: url(images/Background.jpeg) lightgray 50%/ cover no-repeat;
+}
+.icon > img{
+    height: 70px;
+    width: 70px;
+}
+
+ a#settings >img {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    left:0px;
+    top: 0px;
+}
+
+a#sidebar >img{
+    position: relative;
+    left:1160px;
+    top: 0px;
+    height: 70px;
+    width: 70px;
+}
+table#weekly{
+    position: relative;
+    top: 365px;
+    left: -10px;
+    width: 1362px;
+    height: 78.169px;
+}
+
+.days{
+    background: #4a4848a0;
+    border-right:  #4a4848a0;
+    border-left:  #4a4848a0;
+    
+}
+
+#today{
+    width: 350px;
+    height: 110px;
+    flex-shrink: 0;
+    color: #FFFEFE;
+    text-align: center;
+    font-family: Inter;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+section#recom{
+    position: relative;
+    top: 45px;
+    left: 25px;
+    width: 1292.681px;
+    height: 667px;
+    flex-shrink: 0;
+    background: #D9D9D9;
+}
+
+#recom > p{
+    width: 1292.681px;
+    height: 67.29px;
+    flex-shrink: 0;
+    background: #17A5F4;
+}
