@@ -4,52 +4,61 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lalezar">
         <link rel = "stylesheet" href = "homepage.css" type = "text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+
+
     <body>
-        <a id = "settings" href = "settings.html"><img src = "images/settings.png"/></a>
-        <a  id = "sidebar" href = "sidebar.html"><img src = "images/list.png"/> </a>    
-        </form>
-        <div id = "today">
-            <h2>London</h2>
-            <h3>18°</h3>
-        </div>
-        <table id = "weekly">
-            <tr class = "days">
-                <td class = "day">Monday</td>
-                <td class = "icon"><img src = "images/clear_day.png"/></td>
-                <td class = "unit">20°</td>
-            </tr>
-            <tr class="spacer"></tr>
-            <tr class = "days">
-                    <td class = "day">Tuesday</td>
-                    <td class = "icon"><img src = "images/clear_day.png"/></td>
-                    <td class = "unit">18°</td>
-            </tr>
-            <tr class="spacer"></tr>
-            <tr class = "days">
-                <td class = "day">Wednesday</td>
-                <td class = "icon"><img src = "images/clear_day.png"/></td>
-                <td class = "unit">20°</td>
-            </tr>
-            <tr class="spacer"></tr>
-            <tr class = "days">
-                    <td class = "day">Thursday</td>
-                    <td class = "icon"><img src = "images/clear_day.png"/></td>
-                    <td class = "unit">19°</td>
-            </tr>
-            <tr class="spacer"></tr>
-            <tr class = "days">
-                    <td class = "day">Friday</td>
-                    <td class = "icon"><img src = "images/clear_day.png"/></td>
-                    <td class = "unit">22°</td>
-            </tr>
-            <tr class="spacer"></tr>
-            <tr class = "days">
-                <td class = "day">Saturday</td>
-                <td class = "icon"><img src = "images/clear_day.png"/></td>
-                <td class = "unit">23°</td>
-            </tr>
-        </table>
-        </ol>
+
+        <header>
+            <div>
+                <nav id="navback">
+                    <!-- the link bellow is for the back link. it is going to reference to main page without the sidebar-->
+                    <a id = "settings" href = "settings.html"><img src = "settings.png"/></a>
+                    <a  id = "sidebar" href = "sidebar.html"><img src = "list.png"/> </a>
+                </nav>
+            </div>
+        </header>
+
+        <section>
+            <div id="today">
+                <p class="today" id="city">London</p>
+                <p class="today" id="temp">18°</p>
+            </div>
+
+
+            <table id = "weekly">
+                <tr class = "days">
+                    <td class = "day">Monday</td>
+                    <td class = "icon"><img src = "clear_day.png"/></td>
+                    <td class = "unit">20°</td>
+                </tr>
+                <tr class = "days">
+                        <td class = "day">Tuesday</td>
+                        <td class = "icon"><img src = "clear_day.png"/></td>
+                        <td class = "unit">18°</td>
+                </tr>
+                <tr class = "days">
+                    <td class = "day">Wednesday</td>
+                    <td class = "icon"><img src = "clear_day.png"/></td>
+                    <td class = "unit">20°</td>
+                </tr>
+                <tr class = "days">
+                        <td class = "day">Thursday</td>
+                        <td class = "icon"><img src = "clear_day.png"/></td>
+                        <td class = "unit">19°</td>
+                </tr>
+                <tr class = "days">
+                        <td class = "day">Friday</td>
+                        <td class = "icon"><img src = "clear_day.png"/></td>
+                        <td class = "unit">22°</td>
+                </tr>
+                <tr class = "days">
+                    <td class = "day">Saturday</td>
+                    <td class = "icon"><img src = "clear_day.png"/></td>
+                    <td class = "unit">23°</td>
+                </tr>
+            </table>
+        </section>
     </body>
 </html>

@@ -1,10 +1,10 @@
 html{
-    background: url(main.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url("main.jpeg");
 }
+
 
 
 #back{
@@ -45,7 +45,7 @@ html{
 
 section{
     display: grid;
-    grid-template-columns: 1200px 500px;
+    grid-template-columns: 1000px 500px;
     grid-template-rows: auto;
     grid-template-areas: "d1 d2";
 }
