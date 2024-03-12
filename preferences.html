@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferences</title>
+    <link rel="stylesheet" href="preferences.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="page-title">User Preferences</h1>
+        <a href="#" class="back-button">Back</a>
+        <p><button class="save-button"><a href="analytics.html">Save/Edit Preferences</a></button></p>
+        <h2 class="title">Preferred Temperature: <span class="slider-value" id="temperatureValue">20°C</span></h2>
+        <div class="slider-container">
+            <input type="range" min="0" max="40" value="20" class="slider" data-min="0°C" data-max="40°C" id="temperatureSlider">
+        </div>
+        <h2 class="title">Preferred Humidity: <span class="slider-value" id="humidityValue">50%</span></h2>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="50" class="slider" data-min="0%" data-max="100%" id="humiditySlider">
+        </div>
+        <h2 class="title">Preferred Visibility: <span class="slider-value" id="visibilityValue">2.5km</span></h2>
+        <div class="slider-container">
+            <input type="range" min="0" max="5" step="0.1" value="2.5" class="slider" data-min="0km" data-max="5km" id="visibilitySlider">
+        </div>
+        <h2 class="title">Preferred Precipitation: <span class="slider-value" id="precipitationValue">50%</span></h2>
+        <div class="slider-container">
+            <input type="range" min="0" max="100" value="50" class="slider" data-min="0%" data-max="100%" id="precipitationSlider">
+        </div>
+        <h2 class="title">Preferred Wind Speed: <span class="slider-value" id="windSpeedValue">15 knots</span></h2>
+        <div class="slider-container">
+            <input type="range" min="0" max="30" value="15" class="slider" data-min="0 knots" data-max="30 knots" id="windSpeedSlider">
+        </div>
+    </div>
+    <script src="preferences.js"></script>
+</body>
+</html>
