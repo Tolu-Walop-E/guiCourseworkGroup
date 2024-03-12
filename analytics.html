@@ -1,60 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
-        <title>analytics</title>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lalezar">
         <link href="analytics.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap" rel="stylesheet">
     </head>
     <body>
-        <p>
-            <a href="index.html">
+        <p id="back">
+            <a href="preferences.html">
                 Back
             </a>
         </p>
-        <h1>
+
+        <h1 class="title">
             User Preferences
         </h1>
 
-        <div id="analytics">
-            <h5>
-                Temperature
-            </h5>
+        <div class="analytics" id="temperature">
+            <hgroup>
+                <h5>
+                    Temperature
+                </h5>
+            </hgroup>
+               
             <p>
                 Today's tempreature is...
             </p>
         </div>
-        <div id="analytics">
-            <h5>
-                Humidity
-            </h5>
+
+        <div class="analytics" id="humidity">
+            <hgroup>
+                <h5>
+                    Humidity
+                </h5>
+            </hgroup>
+            
             <p>
                 Today's humidity is...
             </p>
         </div>
-        <div id="analytics">
-            <h5>
-                Visibility
-            </h5>
+        <div class="analytics" id="humidity">
+            <hgroup>
+                <h5>
+                    Visibility
+                </h5>
+            </hgroup>
+           
             <p>
                 Today's visibility is...
             </p>
         </div>
-        <div id="analytics">
-            <h5>
-                Precipitation
-            </h5>
+        <div class="analytics" id="precipitation">
+            <hgroup>
+                <h5>
+                    Precipitation
+                </h5>
+            </hgroup>
+            
             <p>
                 Today's precipitation is...
             </p>
         </div>
-        <div id="analytics">
-            <h5>
-                Wind Speed
-            </h5>
+        <div class="analytics" id="wind-speed">
+            <hgroup>
+                <h5>
+                    Wind Speed
+                </h5>
+            </hgroup>
+            
             <p>
                 Today's wind speed is...
             </p>
         </div>
+        <script src="analytics.js"></script>
     </body>
 </html>
