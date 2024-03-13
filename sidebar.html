@@ -1,10 +1,11 @@
 <html>
     <head>
-        <title>Weather app</title>
+        <title>Weather app with sidebar</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lalezar">
-        <link rel = "stylesheet" href = "homepage.css" type = "text/css"/>
+        <link rel = "stylesheet" href = "sidebar.css" type = "text/css"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="sidebar.js"></script>
     </head>
 
 
@@ -59,6 +60,27 @@
                     <td class = "unit">23°</td>
                 </tr>
             </table>
+
+            <div id="sidebartable">
+                <table>
+                    <td>
+                        <div id="top">
+                            <tr class="top"> <a href="index.html" id="s1">login</a>  </tr>
+                            <tr class="top"><p id="s2">Temperature</p></tr>
+                            <tr class="top"><p id="s3">Humidity</p></tr>
+                            <tr class="top"><p id="s4">Visibility</p></tr>
+                            <tr class="top"><p id="s5">Precipitation</p></tr>
+                            <tr class="top"><p id="s6">Wind Speed</p></tr>
+                        </div>
+
+                        <div id="bottom">
+                            <tr class="bottom"> <a href="essentials.html" id="s7">Recommendation</a></tr>
+                            <tr class="bottom"> <a href="planJourney.html" id="s8">Plan My Journey</a></tr>
+                            <tr class="bottom"> <a href="preferences.html" id="s9">Personalisation</a></tr>
+                        </div>
+                    </td>
+                </table>
+            </div>
         </section>
     </body>
 </html>

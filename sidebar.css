@@ -1,0 +1,129 @@
+html{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("main.jpeg");
+}
+
+#sidebar{
+    float: right;
+    height: 70px;
+    width: 70px;
+}
+
+#setting{
+    float: right;
+    height: 70px;
+    width: 70px;
+}
+
+#today{
+    width: 403px;
+    height: 450px;
+    color: #FFFEFE;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(2, auto);
+    margin-bottom: 20px;
+    
+}
+
+#city{
+    margin-bottom: 0;
+}
+
+.today{
+    float: left;
+    font-size: 90px;
+    font-weight: 100;
+    text-align: center;
+}
+
+
+
+tr.days{
+    background: rgba(0, 0, 0, 0.193); 
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "day icon unit";
+    margin-bottom: 2px;
+    padding-top: 5px;
+
+}
+
+
+.day{
+    width: 223.885px;
+    height: 78px;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    grid-area: "day";
+    text-align: left;
+}
+
+.icon{
+    margin: 0;
+    text-align: center;
+    grid-area: "icon";
+}
+
+
+.unit{
+    margin-right: 0;
+    margin-left: 5rem;
+    color: #FFF;
+    text-align: right;
+    font-family: Inter;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    grid-area: "unit";
+}
+
+#weekly{
+    width: 100%;
+    height: fit-content;
+    grid-area: weekly;
+}
+
+
+#today{
+    grid-area: today;
+}
+
+
+#top{
+    grid-area: t;
+}
+
+#bottom{
+    grid-area: b;
+}
+
+
+#sidebartable{
+    grid-area: sidebar;
+    float: left;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    background-color:  rgba(0, 0, 0, 0.193);
+    grid-template-areas: 
+    "t"
+    "."
+    "b";
+}
+
+
+section{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "today sidebar"
+    "weekly sidebar"
+    ;
+}
