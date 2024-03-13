@@ -73,6 +73,15 @@
                 Today's wind speed is...
             </p>
         </div>
-        <script src="analytics.js"></script>
+        <script src="analytics.js">
+            
+            window.onload = function() {
+                document.getElementById("temp").innerHTML = `The temperature is ${temperaturePreference}°C, x°C higher than your preference`;
+                document.getElementById("hum").innerHTML =  `The humidity is ${humidityPreference}%, x% higher than your preference`;
+                document.getElementById("vis").innerHTML = `The visibility is ${visibilityPreference}km, xkm higher than your preference`;
+                document.getElementById("prec").innerHTML = `The precipitation is ${precipitationPreference}%, x% higher than your preference`;
+                document.getElementById("wind").innerHTML = `The wind speed is ${windSpeedPreference}knots, xknots higher than your preference`;
+            }
+        </script>
     </body>
 </html>
