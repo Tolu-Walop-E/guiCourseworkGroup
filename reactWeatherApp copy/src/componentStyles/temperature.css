@@ -1,0 +1,60 @@
+
+#backButton{
+    color: #C60A07;
+    text-align: left;
+    font-family: Lalezar;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+
+.temperatureLocation{
+    display: grid;
+    text-align: center;
+    margin-top: 10pt;
+}
+
+.temperatureLocation #city{
+    color: #FFF;
+    text-align: center;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #000;
+    font-family: Lalezar;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.linkStyle {
+    text-decoration: none;
+    color:#C60A07;
+  }
+
+.linkStyle :visited{
+    color: #C60A07;
+}
+
+.temperatureLocation #degrees{
+    color: #FFF;
+    text-align: center;
+    margin-top: -45px;
+    -webkit-text-stroke-color: #000;
+    font-family: "Lilita One";
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.temperatureIcon{
+    display: flex;
+    justify-content: center;
+}
+
+.temperatureIcon img{
+    width: 50px;
+    height: 50px;
+}

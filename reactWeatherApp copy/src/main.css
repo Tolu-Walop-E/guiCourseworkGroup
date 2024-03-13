@@ -1,0 +1,9 @@
+
+
+body{
+background: url('src/assets/nightBg.png'), black 50% / cover no-repeat;
+background-repeat: no-repeat;
+    
+    background-position: center;
+
+}
