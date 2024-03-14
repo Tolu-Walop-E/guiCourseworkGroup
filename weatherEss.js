@@ -3,9 +3,9 @@ import axios from 'axios';
 const WeatherEss = () => {
     const [city, setCity] = useState('london');
     const [weatherData, setWeatherData] = useState(null);
-    const fetchData = async () => { 
+    const fetchData = async () => { //fetches data from API
         try {
-            const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=7924099ca9b82c9a4fc854b7593c65f4`)
+            const response = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=7924099ca9b82c9a4fc854b7593c65f4`)
             setWeatherData(response.data);
             console.log(response.data); //You can see all the weather data in console log
     } 
@@ -22,49 +22,52 @@ const WeatherEss = () => {
     let vis = 'visibility(';
     let rain = 'precipitation(';
     let win = 'wind speed(';
+    let b;
+    let x;
 
-    if(weatherData){
-        if (weatherData.main.temp > 35) {
-            temp = temp + weatherData.main.temp + ')' + 'is hot: wear clothing of minimal layers and bring water.';
+    if(weatherData){ //ensures that the following code only works when the data is not null 
+        if (weatherData.list[0].main.temp > 35) { //if the tempurature is above 35 degrees celsius a recommendation is given
+            temp = temp + weatherData.list[0].main.temp + ')' + 'is hot: wear clothing of minimal layers and bring water.';
         }
-        else if (weatherData.main.temp < 15){
-            temp = temp + weatherData.main.temp + ')' + "is cold: wear extra layers of clothing.";
+        else if (weatherData.list[0].main.temp < 15){//if the tempurature is above 35 degrees celsius a recommendation is given
+            temp = temp + weatherData.list[0].main.temp + ')' + "is cold: wear extra layers of clothing.";
         }
-        else{
-            temp = temp+ weatherData.main.temp + ')' + "is fine.";
-        }
-    
-        if (weatherData.main.humidity > 50) {
-            hum = hum +  weatherData.main.humidity + ')'+ ' is high: bring water on your cycling trip!';
-        }
-        else{
-            hum = hum + weatherData.main.humidity + ')' + " is fine.";
+        else{//anywhere in between is fine
+            temp = temp+ weatherData.list[0].main.temp + ')' + "is fine.";
         }
     
-        if (weatherData.visibility < 1000) {
-            vis = vis +  weatherData.visibility + ' m)'+'is low: Applying headlights to your bicycle will help.';
+        if (weatherData.list[0].main.humidity > 50) {//if the humidity is above 50% a recommendation is given
+            hum = hum +  weatherData.list[0].main.humidity + ')'+ ' is high: bring water on your cycling trip!';
         }
         else{
-            vis = vis + weatherData.visibility + ' m)'+ "is fine.";
+            hum = hum + weatherData.list[0].main.humidity + ')' + " is fine.";
         }
     
-        if (weatherData.rain > 0.28) {
-            rain = rain  + weatherData.rain + ')'+ 'is high: bring an umbrella, ride with extreme caution/take a different mode of transport';
+        if (weatherData.list[0].visibility < 1000) {//if the visibility is below 1000km then a recommendation is given
+            vis = vis +  weatherData.list[0].visibility + ' m)'+'is low: Applying headlights to your bicycle will help.';
         }
         else{
-            rain  = rain  + weatherData.rain + ')' + "is low.";
+            vis = vis + weatherData.list[0].visibility + ' m)'+ "is fine.";
+        }
+        x = weatherData.list[0].rain; //takes the rain object, the value 3h cant be called directly as it starts with a number
+        b = Object.values(x);//takes all the object values into an array, the value in '3h' is index[0]
+        if (b[0] > 0.7) { //compares the 3h value with a relative high value for mm rainfall/3h
+            rain = rain  + b[0] + ' mm rainfall/3h)'+ 'is high: bring an umbrella, ride with extreme caution/take a different mode of transport';
+        }
+        else{
+            rain  = rain  + b[0] + ' mm rainfall/3h)' + "is low.";
         }
     
-        if (weatherData.wind.speed > 20) {
-            win = win + weatherData.wind.speed + 'meter/sec)'+ 'is high: ride with caution';
+        if (weatherData.list[0].wind.speed > 20) {//if wind speed is above 20 m/s a recommendation is given
+            win = win + weatherData.list[0].wind.speed + 'meter/sec)'+ 'is high: ride with caution';
         }
         else{
-            win = win + weatherData.wind.speed + 'meter/sec)' + "is fine.";
+            win = win + weatherData.list[0].wind.speed + 'meter/sec)' + "is fine.";
         }
     }
 
 
-    return ( 
+    return ( //button #got should link to homepage
         <section id = "recom">
             <p>Essentials</p>
             <ul>
@@ -75,7 +78,7 @@ const WeatherEss = () => {
                 <li>{win}</li>
             </ul>
 
-            <button id = "got">Got it</button>
+            <button id = "got">Got it</button> 
         </section>
     );
 };
