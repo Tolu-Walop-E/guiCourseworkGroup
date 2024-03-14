@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../componentStyles/preferences.css'
+import { Link } from 'react-router-dom'
 
 function storeFunction(temperature, humidity, visibility, precipitation, windSpeed) {
     localStorage.setItem("prefTemp", temperature);
@@ -9,23 +10,6 @@ function storeFunction(temperature, humidity, visibility, precipitation, windSpe
     localStorage.setItem("prefWind", windSpeed);
 }
 
-function DisplayStuff() {
-    const temperaturePreference = localStorage.getItem('prefTemp');
-    const humidityPreference = localStorage.getItem('prefHum');
-    const visibilityPreference = localStorage.getItem('prefVis');
-    const precipitationPreference = localStorage.getItem('prefPrec');
-    const windSpeedPreference = localStorage.getItem('prefWind');
-
-    return (
-        <>
-            <h1>{temperaturePreference}</h1>
-            <h1>{humidityPreference}</h1>
-            <h1>{visibilityPreference}</h1>
-            <h1>{precipitationPreference}</h1>
-            <h1>{windSpeedPreference}</h1>
-        </>
-    );
-}
 
 function Preferences() {
     const [temperature, setTemperature] = useState(20);
@@ -43,9 +27,17 @@ function Preferences() {
     return (
         <div className="container">
             <h1 className="page-title">User Preferences</h1>
-            <a href="#" className="back-button">Back</a>
+            <p className="back-button">
+                <Link to = "/">
+                    Back
+                </Link>
+            </p>
             <p>
-                <button className="save-button" onClick={handleSavePreferences}>Save/Edit Preferences</button>
+            <button className="save-button" onClick={handleSavePreferences}>
+                    <Link to = "/analytics">
+                        Save/Edit Preferences
+                    </Link>
+                </button>
             </p>
 
             {displayValues && <DisplayStuff />}

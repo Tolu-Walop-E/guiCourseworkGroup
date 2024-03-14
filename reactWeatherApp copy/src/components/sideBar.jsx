@@ -51,6 +51,11 @@ function SideBar({placement,placementChange}){
                                     <Link to = "/editlocation" className='linkStyle'>Personalisation</Link>
                                     </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <Link to = "/preferences" className='linkStyle'>Preferences</Link>
+                                    </td>
+                            </tr>
                             </div>
                     }
                     </tbody>
