@@ -1,0 +1,147 @@
+
+.lalezar-regular {
+    font-family: "Lalezar", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+.container {
+    padding: 20px;
+
+    flex-shrink: 0;
+    color: #C60A07;
+    text-align: center;
+    font-family: Lalezar, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('images/background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container.blur {
+    filter: blur(5px); /* Adjust the blur amount as needed */
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    color: #C60A07;
+    font-size: 16px;
+    font-family: Lalezar;
+    cursor: pointer;
+    text-decoration: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-button:hover,
+.back-button:focus,
+.back-button:active,
+.back-button:focus-visible {
+    text-decoration: underline;
+}
+
+.save-button {
+    color: #C60A07 !important;
+    font-size: 16px;
+    font-family: Lalezar;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none !important;
+
+}
+
+.save-button:hover,
+.save-button:focus,
+.save-button:active,
+.save-button:focus-visible {
+    text-decoration: underline;
+}
+
+.save-button a {
+    color: inherit; /* Use the same color as its parent */
+    text-decoration: none; /* Remove underline by default */
+}
+
+.save-button a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+.save-button:visited {
+    color: #C60A07 !important;
+}
+
+.title {
+    text-align: center;
+    margin-top: 33px;
+}
+
+.slider-container {
+    position: relative;
+    margin-top: 10px;
+}
+
+.slider {
+    width: calc(100% - 120px);
+    height: 5px;
+    -webkit-appearance: none;
+    background: #C60A07;
+    outline: none;
+    opacity: 0.7;
+    margin: 0 60px;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #C60A07;
+    position: relative;
+    z-index: 1;
+}
+
+.slider::before {
+    content: attr(data-min);
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    padding-right: 500px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.slider::after {
+    content: attr(data-max);
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    padding-left: 500px;
+    font-size: 16px;
+    font-weight: bold;
+}

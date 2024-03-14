@@ -1,0 +1,15 @@
+.mapIcon{
+    display: flex;
+    justify-content: center;
+   
+
+}
+
+.mapIcon img{
+    
+    width: 1400px;
+    height: 608px;
+    margin-top: -70px;
+    border-radius: 50px;
+    background: rgba(217, 217, 217, 0.70);
+}

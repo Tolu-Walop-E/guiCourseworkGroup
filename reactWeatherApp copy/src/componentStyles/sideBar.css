@@ -1,0 +1,88 @@
+
+.sidebarClass{
+    background: #313131a0;
+    
+    height: 100%;
+    width: 236px; 
+    top: 0;
+    text-align: left;
+    
+}
+
+.settingsIcon.left{
+    top: 0;
+    position: absolute;
+    right: 0;
+}
+
+.settingsIcon.right{
+    top: 0;
+    position: absolute;
+    left: 0;
+}
+
+.sidebarClass.left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+.sidebarClass.right ~ #weekly {
+    margin-left: -256px;
+}
+.sidebarClass.right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+
+#display td{
+    padding: 24px;
+    color: #FFF;
+    text-align: left;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+    
+}
+
+
+#display td:hover{
+    padding: 24px;
+    color: grey;
+    text-align: left;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+}
+
+
+
+
+/* h5 {
+    border-radius: 40px;
+    background: #C60A07;
+    box-shadow: 0px 15px 4px 0px rgba(0, 0, 0, 0.25);
+    float: left;
+    padding: 1%;
+    line-height: normal;
+} */
+
+
+.linkStyle {
+    text-decoration: none;
+    color:white;
+  }
+
+.linkStyle :visited{
+    text-decoration: none;
+    color: white;
+}
