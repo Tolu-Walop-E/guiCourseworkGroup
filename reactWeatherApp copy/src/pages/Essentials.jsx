@@ -1,4 +1,4 @@
-import WeatherEss from './components/weatherEss';
+import WeatherEss from '../components/weatherEss';
 
 
 
