@@ -22,25 +22,23 @@ const WeatherEss = () => {
     let vis = 'visibility(';
     let rain = 'precipitation(';
     let win = 'wind speed(';
-    let b;
-    let x;
 
-    if(weatherData){ //ensures that the following code only works when the data is not null 
+    if(weatherData !== null){ //ensures that the following code only works when the data is not null 
         if (weatherData.list[0].main.temp > 35) { //if the tempurature is above 35 degrees celsius a recommendation is given
-            temp = temp + weatherData.list[0].main.temp + ')' + 'is hot: wear clothing of minimal layers and bring water.';
+            temp = temp + weatherData.list[0].main.temp + ' °C)' + 'is hot: wear clothing of minimal layers and bring water.';
         }
         else if (weatherData.list[0].main.temp < 15){//if the tempurature is above 35 degrees celsius a recommendation is given
-            temp = temp + weatherData.list[0].main.temp + ')' + "is cold: wear extra layers of clothing.";
+            temp = temp + weatherData.list[0].main.temp + ' °C)' + "is cold: wear extra layers of clothing.";
         }
         else{//anywhere in between is fine
-            temp = temp+ weatherData.list[0].main.temp + ')' + "is fine.";
+            temp = temp+ weatherData.list[0].main.temp + ' °C)' + "is fine.";
         }
     
         if (weatherData.list[0].main.humidity > 50) {//if the humidity is above 50% a recommendation is given
-            hum = hum +  weatherData.list[0].main.humidity + ')'+ ' is high: bring water on your cycling trip!';
+            hum = hum +  weatherData.list[0].main.humidity + '%)'+ ' is high: bring water on your cycling trip!';
         }
         else{
-            hum = hum + weatherData.list[0].main.humidity + ')' + " is fine.";
+            hum = hum + weatherData.list[0].main.humidity + '%)' + " is fine.";
         }
     
         if (weatherData.list[0].visibility < 1000) {//if the visibility is below 1000km then a recommendation is given
@@ -49,13 +47,12 @@ const WeatherEss = () => {
         else{
             vis = vis + weatherData.list[0].visibility + ' m)'+ "is fine.";
         }
-        x = weatherData.list[0].rain; //takes the rain object, the value 3h cant be called directly as it starts with a number
-        b = Object.values(x);//takes all the object values into an array, the value in '3h' is index[0]
-        if (b[0] > 0.7) { //compares the 3h value with a relative high value for mm rainfall/3h
-            rain = rain  + b[0] + ' mm rainfall/3h)'+ 'is high: bring an umbrella, ride with extreme caution/take a different mode of transport';
+
+        if (weatherData.list[0].pop > 0.5) { //compares the probabilty of precipitation value with a relative high value for pop
+            rain = rain  + (weatherData.list[0].pop * 100) + '%)'+ 'is high: bring an umbrella, ride with extreme caution/take a different mode of transport';
         }
         else{
-            rain  = rain  + b[0] + ' mm rainfall/3h)' + "is low.";
+            rain  = rain  + (weatherData.list[0].pop * 100) + '%)' + "is low.";
         }
     
         if (weatherData.list[0].wind.speed > 20) {//if wind speed is above 20 m/s a recommendation is given
