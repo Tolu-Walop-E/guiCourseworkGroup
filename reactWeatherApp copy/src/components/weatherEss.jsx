@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'; 
-import "../componentstyles/Essentials.css"
+import "../componentStyles/Essentials.css"
 import axios from 'axios';
 const WeatherEss = () => {
     const [city, setCity] = useState('london');
