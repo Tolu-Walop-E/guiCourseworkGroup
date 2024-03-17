@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'; 
 import "../componentStyles/Essentials.css"
+import { Link } from 'react-router-dom'
 import axios from 'axios';
 const WeatherEss = () => {
     const [city, setCity] = useState('london');
@@ -76,7 +77,7 @@ const WeatherEss = () => {
                 <li>{win}</li>
             </ul>
 
-            <button id = "got">Got it</button> 
+            <Link to = "/"><button id = "got">Got it</button></Link> 
         </section>
     );
 };
