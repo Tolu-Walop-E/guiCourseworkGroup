@@ -39,7 +39,7 @@ function SideBar({placement,placementChange}){
                                 <td>*gap here*</td>
                             </tr>
                             <tr>
-                                <td>Recommendation</td>
+                                <td><Link to = "/recommendation" className='linkStyle'>Recommendation</Link></td>
                             </tr>
                             <tr>
                                 <td>
