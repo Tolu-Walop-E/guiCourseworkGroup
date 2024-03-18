@@ -1,18 +1,37 @@
-/*
+html{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../assets/main.jpeg");
+}
+
+#sidebar{
+    float: right;
+    height: 70px;
+    width: 70px;
+}
+
+#setting{
+    float: left;
+    height: 70px;
+    width: 70px;
+    position: absolute;
+}
+
 #today{
-    width: 403px;
-    height: 450px;
     color: #FFFEFE;
     display: grid;
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(2, auto);
     margin-bottom: 20px;
-    
+    margin-left: 0; 
+    margin-top: 30px;
+    float: left;
+    margin-left: 40px;
 }
 
-
 #city{
-    margin-bottom:100px;
+    margin-bottom: 0;
 }
 
 .today{
@@ -25,13 +44,13 @@
 
 
 #weekly tr{
-    background: #000000a0;
+    background: rgba(0, 0, 0, 0.193); 
     display: grid;
     grid-template-rows: repeat(3, auto);
     grid-template-areas: "day icon unit";
     margin-bottom: 2px;
     padding-top: 5px;
-
+    margin-left: 0;
 }
 
 
@@ -39,7 +58,7 @@
     width: 223.885px;
     height: 78px;
     color: #FFF;
-    font-family: Lalezar;
+    font-family: Inter;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
@@ -60,16 +79,14 @@
     margin-left: 5rem;
     color: #FFF;
     text-align: right;
-    font-family: Lalezar;
+    font-family: Inter;
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
     grid-area: "unit";
 }
 
+
 table{
     width: 100%;
-    height: fit-content;
 }
-*/
-
