@@ -8,7 +8,7 @@ import DayForecast from '../components/daysSection.jsx'
 function HomePage(){
     return(
         <>
-            
+            <home />
             <Temperature backVisible={false} />
             <DayForecast />
             

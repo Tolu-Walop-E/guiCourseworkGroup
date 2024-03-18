@@ -12,7 +12,9 @@ import Weather from "./components/weather.jsx";
 import SettingPage from "./pages/settingsPage.jsx";
 import AnalyticsPage from "./pages/analyticsPage.jsx";
 import Preferences from "./components/preferences.jsx";
-import Essentials from ".pages/Essentials.jsx"
+//import Essentials from ".pages/Essentials.jsx"
+//<Route path="/recommendation" element={<Essentials/>} />
+
 function App() {
     return (
         <Router>
@@ -24,7 +26,6 @@ function App() {
                 <Route path="/settings" element={<SettingPage />} />
                 <Route path="/analytics" element={<AnalyticsPage />} />
                 <Route path="/preferences" element={<Preferences />} />
-                <Route path="/recommendation" element={<Essentials/>} />
 
             </Routes>
         </Router>
