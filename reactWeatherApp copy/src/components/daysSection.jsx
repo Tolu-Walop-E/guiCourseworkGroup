@@ -3,7 +3,6 @@
 
 
 import { useEffect, useState } from 'react';
-import '../componentStyles/daySection.css';
 import SideBar from './sideBar';
 let weatherImageArray = ["src/assets/sunnyIcon.png", "src/assets/rainCloudIcon.png", "src/assets/thunderStormIcon.png","src/assets/snowIcon.png"];
 let temp5Days = []
