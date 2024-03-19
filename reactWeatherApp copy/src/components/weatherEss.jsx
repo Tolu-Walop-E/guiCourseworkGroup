@@ -25,10 +25,10 @@ const WeatherEss = () => {
 
     if(weatherData !== null){ //ensures that the following code only works when the data is not null 
         cityname = weatherData.city.name;
-        if (weatherData.list[0].main.temp > (localStorage.getItem("prefTemp")+ 7)) { //if the tempurature is above 35 degrees celsius a recommendation is given
+        if (weatherData.list[0].main.temp > (localStorage.getItem("prefTemp")+ 7)) { //if the tempurature is 7 degrees above preferred temp a recommendation is given
             temp = temp + weatherData.list[0].main.temp + ' °C)' + 'is hot: wear clothing of minimal layers and bring water.';
         }
-        else if (weatherData.list[0].main.temp < (localStorage.getItem("prefTemp")- 7)){//if the tempurature is above 35 degrees celsius a recommendation is given
+        else if (weatherData.list[0].main.temp < (localStorage.getItem("prefTemp")- 7)){//if the tempurature is 7 degrees below preferred temp a recommendation is given
             temp = temp + weatherData.list[0].main.temp + ' °C)' + "is cold: wear extra layers of clothing.";
         }
         else{//anywhere in between is fine
@@ -49,14 +49,14 @@ const WeatherEss = () => {
             vis = vis + weatherData.list[0].visibility + ' m)'+ "is fine.";
         }
 
-        if ((weatherData.list[0].pop * 100) > ((localStorage.getItem("prefPrec") + 7))) { //compares the probabilty of precipitation value with a relative high value for pop
+        if ((weatherData.list[0].pop * 100) > ((localStorage.getItem("prefPrec") + 7))) { //compares the probabilty of precipitation value with the preferred precipitation + 7
             rain = rain  + (weatherData.list[0].pop * 100) + '%)'+ 'is high: bring an umbrella, ride with extreme caution/take a different mode of transport';
         }
         else{
             rain  = rain  + (weatherData.list[0].pop * 100) + '%)' + "is low.";
         }
     
-        if (weatherData.list[0].wind.speed > ((localStorage.getItem("prefWind") + 7))) {//if wind speed is above 20 m/s a recommendation is given
+        if (weatherData.list[0].wind.speed > ((localStorage.getItem("prefWind") + 7))) {//if wind speed is 7 above the preferred wind speed a recommendation is given
             win = win + weatherData.list[0].wind.speed + 'meter/sec)'+ 'is high: ride with caution';
         }
         else{
